@@ -120,6 +120,56 @@ main > section{
 
 
 
+/* ---- cute apu section */
+.cute-apu{
+  gap: 100px;
+}
+#apu-title{
+  border-left: 10px solid #FF900E;
+  border-radius: 10px;
+  padding-left: 20px;
+
+}
+.inner-card{
+  padding: 30px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.inner-enjoy{
+  margin-bottom: 20px;
+}
+.inner-detail{
+  color: #727272;
+}
+.inner-card, .inner-title{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.experience-badge {
+  padding: 45px 42px;
+  margin-top: -92px;
+  margin-left: -50px;
+}
+#year{
+  font-size: 3rem;
+  font-weight: 700;
+}
+#experience{
+  font-size: 1.5rem;
+  font-weight: medium;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* ---- some facts */
 .fact-container{
   display: grid;
@@ -171,7 +221,7 @@ main > section{
 
 /* ---- responsive */
 @media screen and (max-width: 576px){
-  .navbar, .nav-links, .features{
+  .navbar, .nav-links, .features,.cute-apu{
     flex-direction: column;
 
   }
@@ -185,6 +235,13 @@ main > section{
     justify-items: center;
     gap: 20px;
   }
+  .cute-apu-img img{
+    width: 100%;
+  }
+  .experience-badge {
+  margin-top: -40px;
+  margin-left: 20px;
+}
   
 
 
@@ -193,7 +250,7 @@ main > section{
 }
 /* ---- medium device */
 @media screen and (min-width: 576px) and (max-width: 992px){
-   .features{
+   .features,.cute-apu{
     flex-direction: column;
 
   }
