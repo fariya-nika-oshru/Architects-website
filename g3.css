@@ -11,6 +11,14 @@
 
 
 /* ----shared style */
+main{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main > section{
+  margin-top: 130px;
+}
+
 .flex{
   display : flex;
 }
@@ -29,12 +37,37 @@
   background-color: rgb(255, 144, 14, 0.1);
 }
 
+.button{
+  padding: 15px 20px;
+  color: white;
+  background-color: #FF900E;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.section-title{
+  font-size: 2.8rem;
+  font-weight: 700;
+
+}
+
+
+
 
 
 /* ---- header */
 
 .navbar{
     justify-content: space-around;
+    align-items: center;
+}
+.nav-heading{
+  font-weight: 700;
+  font-size: 3rem;    /* ---- 1 rem = 16 px */
+
 }
 .nav-links{
     gap: 1em;
@@ -49,4 +82,104 @@
 .navbar, .banner{
   max-width : 1440px;
   margin: 0 auto;
+}
+.banner-content{
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner-title{
+  font-size: 4rem;
+  font-weight: 700;
+}
+.banner-img{
+  width: 100%;
+}
+
+
+/* ---- feature section */
+.features{
+  align-items: center;
+}
+.team-desc{
+  margin-left: 130px;
+  max-width: 530px;
+}
+.team-img{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+#quick-list{
+  font-weight: 500;
+}
+#our-features{
+  color: #FF900E;
+}
+
+
+
+/* ---- some facts */
+.fact-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.fact{
+  height: 10rem;
+  width: 8rem;
+  border: 2px solid #FF900E;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.fact-number{
+  font-size: 2.8rem;
+  font-weight: 600px;
+  margin: 4px 0;
+}
+.fact-desc{
+  max-width: 540px;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* ---- responsive */
+@media screen and (max-width: 576px){
+  .navbar, .nav-links, .features{
+    flex-direction: column;
+
+  }
+  .team-img, .fact-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .team-desc{
+    margin: 20px;
+  }
+  .fact-container{
+    justify-items: center;
+    gap: 20px;
+  }
+
+
+
+
+}
+/* ---- medium device */
+@media screen and (min-width: 576px) and (max-width: 992px){
+   .features{
+    flex-direction: column;
+
+  }
+  .team-desc{
+    margin: 50px auto;
+  }
+
 }
